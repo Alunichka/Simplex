@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="description" content="Описание сайта"/>
+  <meta name="keywords" content="Ключевые слова"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="..."/>
+  <title>Simplex_web</title>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Signika" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+
+	<!-- Адаптивное меню -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var touch = $('#touch-menu');
+		    var menu = $('.nav');
+		 
+		    $(touch).on('click', function(e) {
+		        e.preventDefault();
+		        menu.slideToggle();
+		    });
+		    $(window).resize(function(){
+		        var wid = $(window).width();
+		        if(wid > 480 && menu.is(':hidden')) {
+		            menu.removeAttr('style');
+		        }
+		    });
+		});
+	</script>
+
+	<!-- Переход на верхнюю часть страницы -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				if($(this).scrollTop() > 1500) {
+					$('#toTop').fadeIn();
+				} else {
+			$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('body,html').animate({scrollTop:0},3000);
+			});
+		});
+	</script>
+
+  	<!-- Плавный скролл по якорям -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('a[href^="#"]').click(function () { 
+			    elementClick = $(this).attr("href");
+				destination = $(elementClick).offset().top;
+				if($.browser.safari){
+				$('body').animate( { scrollTop: destination }, 2000 );
+				} else {
+			    	$('html').animate( { scrollTop: destination }, 2000 );
+				}
+				return false;
+		   });
+		});
+	</script>
+
+</head>
+
+<body> 
+<!-- Обвертка страницы -->
+<div id="wrapper">
+	<!-- Секция HOME -->
+	<div id="home">
+		<header class="center clearfix">
+			<div id="logo" class="left">
+				<a href="#">simplex</a>
+			</div>
+			<a href="#" id="touch-menu">MENU</a>
+			<nav class="right">
+				<ul class="nav clearfix">
+					<li class="left"><a class="active" href="#home">Home</a></li>
+					<li class="left"><a href="#about">About</a></li>
+					<li class="left"><a href="#services">Services</a></li>
+					<li class="left"><a href="#clients">Clients</a></li>
+					<li class="left"><a href="#touch">Contacts</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!-- Слайдер с радио кнопками -->
+		<div id="slider" class="center">
+		    <input type="radio" name="slider1" id="slider1_1" checked="checked">
+		    <label for="slider1_1"></label>
+		    <div><h1>Make your business a booming one!</h1></div>
+
+		    <input type="radio" name="slider1" id="slider1_2">
+		    <label for="slider1_2"></label>
+		    <div><h1>We know how to solve your problems!</h1></div>
+
+		    <input type="radio" name="slider1" id="slider1_3">
+		    <label for="slider1_3"></label>
+		    <div><h1>Interminable Energy for Your Project!</h1></div>
+
+		    <input type="radio" name="slider1" id="slider1_4" class="last">
+		    <label for="slider1_4" class="last"></label>
+		    <div><h1>Let Us Show You the Way to Success!</h1></div>
+		</div>
+		<!-- Слайдер с радио кнопками END-->
+		<!-- Соц. сети -->
+		<div id="social" class="center text-center clearfix">
+			<a id="fb" class="left" href="#" target="blank">&nbsp;</a>
+			<a id="tw" class="left" href="#" target="blank">&nbsp;</a>
+			<a id="goo" class="left" href="#" target="blank">&nbsp;</a>
+			<a id="in" class="left" href="#" target="blank">&nbsp;</a>
+		</div>
+		<!-- Соц. сети END -->
+	</div>
+	<!-- Секция HOME END -->
+	
+	<!-- Контент -->
+	<!-- Секция About -->
+	<div id="about">
+		<div class="center clearfix">
+			<div class="section_header">
+				<div id="logo" class="left">
+					<a href="#">simplex</a>
+				</div>
+				<nav class="right">
+					<ul class="clearfix">
+						<li class="left"><a href="#home">Home</a></li>
+						<li class="left"><a class="active"href="#about">About</a></li>
+						<li class="left"><a href="#services">Services</a></li>
+						<li class="left"><a href="#clients">Clients</a></li>
+						<li class="left"><a href="#touch">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+			<h2 class="text-center">Only Professional <span id="serv"><a href="#services">Services</a></span> for Our <span id="clients_span"><a href="#clients">Clients</a></span></h2>
+			<p id="about_descr" class="text-center"><span><a id="here" href="#" target="blank">Click here</a></span> for more info about this free website template created. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis erat mattis neque facilisis, sit amet ultricies</p>
+			<div id="team_wrap" class="clearfix">
+				<div class="team_item">
+					<div class="team_pic">
+						<img src="img/team_1.png" alt="Picture">
+					</div>
+					<div class="team_txt">
+						<p class="name">Laura Stegner</p>
+						<p class="position">senior manager</p>
+					</div>
+					<div class="team_social" class="clearfix">
+						<a id="team_fb" href="#" target="blank">&nbsp;</a>
+						<a id="team_tw" href="#" target="blank">&nbsp;</a>
+						<a id="team_goo" href="#" target="blank">&nbsp;</a>
+						<a id="team_in" href="#" target="blank">&nbsp;</a>
+					</div>
+				</div>
+				<div class="team_item">
+					<div class="team_pic">
+						<img src="img/team_2.png" alt="Picture">
+					</div>
+					<div class="team_txt">
+						<p class="name">Anton Stegner</p>
+						<p class="position"> manager</p>
+					</div>
+					<div class="team_social" class="clearfix">
+						<a id="team_fb" href="#" target="blank">&nbsp;</a>
+						<a id="team_tw" href="#" target="blank">&nbsp;</a>
+						<a id="team_goo" href="#" target="blank">&nbsp;</a>
+						<a id="team_in" href="#" target="blank">&nbsp;</a>
+					</div>
+				</div>
+				<div class="team_item">
+					<div class="team_pic">
+						<img src="img/team_3.png" alt="Picture">
+					</div>
+					<div class="team_txt">
+						<p class="name">Lisa Haddon Stegner</p>
+						<p class="position acc">accounter</p>
+					</div>
+					<div class="team_social acc" class="clearfix">
+						<a id="team_fb" href="#" target="blank">&nbsp;</a>
+						<a id="team_tw" href="#" target="blank">&nbsp;</a>
+						<a id="team_goo" href="#" target="blank">&nbsp;</a>
+						<a id="team_in" href="#" target="blank">&nbsp;</a>
+					</div>
+				</div>
+				<div class="team_item">
+					<div class="team_pic">
+						<img src="img/team_4.png" alt="Picture">
+					</div>
+					<div class="team_txt">
+						<p class="name">Bradley Grosh</p>
+						<p class="position">director</p>
+					</div>
+					<div id="empty"></div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- Секция About END -->
+
+	<!-- Секция Services -->
+	<div id="services">
+		<div class="center clearfix">
+			<div class="section_header">
+				<div id="logo" class="left">
+					<a href="#">simplex</a>
+				</div>
+				<nav class="right">
+					<ul class="clearfix">
+						 <li class="left"><a href="#home">Home</a></li>
+						<li class="left"><a href="#about">About</a></li>
+						<li class="left"><a class="active" href="#services">Services</a></li>
+						<li class="left"><a href="#clients">Clients</a></li>
+						<li class="left"><a href="#touch">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+			<h2 class="text-center">Our Services</h2>
+			<p id="services_descr" class="text-center">Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus libero. Praesent faucibus malesuada faucibus. Donec laoreet metus id laoreet malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur orci sed nulla facilisis consequat. Curabitur vel lorem sit amet nulla ullamcorper fermentum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+			<div id="serv_items_wrap" class="clearfix">
+				<div class="services_item">
+					<div class="serv_pic">
+						<img src="img/serv_1.png" alt="Picture">
+					</div>
+					<div class="serv_txt">
+						<a class="title" href="#" target="blank">Strategy</a>
+						<p class="item_about">Vivamus at magna non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a, commodo luctus libero.</p>
+					</div>
+				</div>
+				<div class="services_item">
+					<div class="serv_pic">
+						<img src="img/serv_2.png" alt="Picture">
+					</div>
+					<div class="serv_txt">
+						<a class="title" href="#" target="blank">Research</a>
+						<p class="item_about"">Ite auctor non pellentesque vel, aliquet sit amet erat. Nullam eget dignissim nisi, aliquam feugiat nibhh sagittis ut. </p>
+					</div>
+				</div>
+				<div class="services_item">
+					<div class="serv_pic">
+						<img src="img/serv_3.png" alt="Picture">
+					</div>
+					<div class="serv_txt">
+						<a class="title" href="#" target="blank">Development</a>
+						<p class="item_about"">Praesent faucibusamus ater asmagna non nunc tristique rhoncus. Aliquam nib ante, tas id dictum aluctus libero.</p>
+					</div>
+				</div>
+				<div class="services_item">
+					<div class="serv_pic">
+						<img src="img/serv_4.png" alt="Picture">
+					</div>
+					<div class="serv_txt">
+						<a class="title" href="#" target="blank">Consulting</a>
+						<p class="item_about">Etiam dui eros na non nunc tristique rhoncus. Aliquam nibh ante, egestas id dictum a commodo luctus libero.</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- Секция Services END -->
+	
+	<!-- Секция Clients -->
+	<div id="clients">
+		<div class="center clearfix">
+			<div class="section_header">
+				<div id="logo" class="left">
+					<a href="#">simplex</a>
+				</div>
+				<nav class="right">
+					<ul class="clearfix">
+						 <li class="left"><a href="#home">Home</a></li>
+						<li class="left"><a href="#about">About</a></li>
+						<li class="left"><a href="#services">Services</a></li>
+						<li class="left"><a class="active" href="#clients">Clients</a></li>
+						<li class="left"><a href="#touch">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+			<h2 class="text-center">Our Clients</h2>
+			<div id="clients_items_wrap">
+				<div class="clients_line first_line clearfix">
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_1.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Aliquam nibh ante, egestas id dictum  wrecommodo luctus liberoaesent.</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_2.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Fusce adipiscing quam id risus gittis.</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_3.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Quisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_4.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Courrewerwe abitur vel lorem sit amet ulla ullamcorper fermentumn vitae.</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+				</div>
+
+				<div class="clients_line second_line clearfix">
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_5.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Oiliquam nibh ante, egestas id dictum  wrecommodo luctus libero.</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_6.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Gusce adipiscing quam id risus gittis.</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_7.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Niuisque viverra nulla nunc, eu ultrices wertlibero ultricies egetasellus</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+					<div class="clients_item left text-center">
+						<a class="client_logo" href="#" target="blank"><img src="img/client_logo_8.jpg" alt="Client"></a>
+						<p class="title">Company Name</p>
+						<p class="item_about">Fouerourrewerwe abitur vel lorem sit amet ulla ullamcorper fermentum.</p>
+						<a href="#" class="goto">Go to Site</a>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<!-- Секция Clients END -->
+
+	<!-- Секция Touch -->
+	<div id="touch">
+		<div class="center clearfix">
+			<div class="section_header">
+				<div id="logo" class="left">
+					<a href="#">simplex</a>
+				</div>
+				<nav class="right">
+					<ul class="clearfix">
+						 <li class="left"><a href="#home">Home</a></li>
+						<li class="left"><a href="#about">About</a></li>
+						<li class="left"><a href="#services">Services</a></li>
+						<li class="left"><a href="#clients">Clients</a></li>
+						<li class="left"><a class="active" href="#touch">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+			<h2 class="text-center">Get in Touch</h2>
+			<p id="touch_text" class="text-center">Gyrto ivamus at magna non nunc tristique rhoncusu. Lliquam nibh ante, egestas id dictum a, commodo luctus mibero. Praesent faucibus malesuada faucibu. Monec laoreet metus id laoreet malesuadw.</p>
+			<div id="touch_footer" class="clearfix">
+				<div class="part left first">
+					<h5>Address</h5>
+					<div id="address" class="clearfix">
+						<div id="address_text" class="left">
+							<ul>
+								<li>The Company Name Inc.</li>
+								<li>8901 Marmora Road,</li>
+								<li>Glasgow, D04 89GR.</li>
+							</ul>
+							<ul>
+								<li>Freephone:+1 800 559 6580</li>
+								<li>Telephone: +1 800 603 6035</li>
+								<li>FAX:           +1 800 889 9898</li>
+								<li>E-mail: <span><a href="mailto:mail@demolink.org">mail@demolink.org</a></span></li>
+								<li>Skype: <span>@skypename</span></li>
+							</ul>
+						</div>
+						<div id="map" class="right">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3186.5281707117356!2d-85.90774394650515!3d36.99719418259281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1473943970108" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="part left second">
+					<h5>Ask a Question</h5>
+					<form action="">
+						<input class="form_txt" type="text" placeholder="Name" required="required">
+						<input class="form_txt" type="text" placeholder="E-mail:" required="required">
+						<textarea name="" id="" placeholder="Message:"></textarea>
+						<button>Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Секция Touch END-->
+</div>
+<!-- Контент END -->
+<!-- Обвертка страницы END -->
+
+<!-- Подвал страницы -->
+<footer>
+	<div class="center">
+		<p><span><a href="#">simplex</a></span>  &#169; 2016 | Privacy Policy</p>
+		<p>Webpage created by Marina Lapteva</p>
+	</div>
+</footer>
+<!-- Подвал страницы END -->
+
+<!-- Переход на верх страницы -->
+<div id="toTop">&nbsp;</div>	
+
+</body>
+</html>
